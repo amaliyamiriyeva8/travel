@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 *{
 margin: 0;
 padding: 0;
@@ -22,7 +23,7 @@ nav{
      width: 100%;
      @include between;
      img{
-        width: 12%;
+        width: 130px;
      }
      ul{
         width: 530px;
@@ -32,7 +33,31 @@ nav{
          font-size: 17px;
          color: $color-1;
          font-weight: 700;
+         position: relative;
+         cursor: pointer;
+         &::after{
+            content: "";
+            display: block;
+            border-bottom: 1px solid yellow;
+            width: 0px;
+            position: absolute;
+            margin-top: 10px;
+            bottom: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: all;
+            transition-duration: .4s;
+            transition-timing-function: linear;
+         }
+         &:hover::after{
+           width: 100%;
         }
+        }
+     }
+     #list{
+        font-size: 35px;
+        color: $color-1;
+        display: none;
      }
     }
 }
@@ -48,7 +73,7 @@ nav{
         @include center;
         .for{
             padding: 20px 0px;
-            width: 50%;
+            width: 80%;
             @include center;
             flex-direction: column;
             gap: 20px;
@@ -91,9 +116,11 @@ nav{
     padding: 60px 0px;
     .book{
         width: 100%;
-        @include  between;
+     @include center;
+     gap: 40px;
+        flex-wrap: wrap;
         .book-1{
-            width: 20%;
+            width: 240px;
             @include center;
             text-align: center;
             flex-direction: column;
@@ -110,6 +137,362 @@ nav{
                 font-size: 16px;
                 color: rgb(99, 98, 98);
                 line-height: 26px;
+            }
+        }
+    }
+}
+
+.section3{
+width: 100%;
+height: 100vh;
+.beach{
+    @include center;
+    height: 100%;
+    .beach-1{
+        width: 50%;
+        background-color: gainsboro;
+        height: 100vh;
+     display: flex;
+     justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+      padding-left: 30px;
+      padding-right: 30px;
+       h1{
+        font-size: 35px;
+        font-weight: 500;
+        padding-bottom: 40px;
+      
+       }
+       p{
+        line-height: 30px;
+        font-size: 15px;
+        color: rgb(128, 125, 125);
+       }
+    }
+    .beach-2{
+        width: 50%;
+        height: 100vh;
+        img{
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+}
+}
+.section4{
+    width: 100%;
+    padding: 40px 0px;
+    @include center;
+    .word{
+        width: 70%;@include center;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        h1{
+            font-size: 31px;
+            font-weight: 700;
+        }
+        p{
+            font-size: 16px;
+            color: rgb(83, 82, 82) ;
+            font-weight: 600;
+        }
+    }
+}
+.section5{
+    width: 100%;
+    padding: 60px 0px;
+    .pictures{
+        @include center;
+        gap: 30px;
+        flex-wrap: wrap;
+        img{
+            width: 22%;
+            height: 200px;
+            object-fit: cover;
+        }
+    }
+}
+.section6{
+    width: 100%;
+    background-attachment: fixed;
+    background-image: url("https://demo.kaliumtheme.com/travel/wp-content/uploads/2017/06/amsterdam-1.jpg?id=553");
+    padding: 60px 0px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include center;
+   
+    .flat{
+        width: 70%;
+        flex-direction: column;
+        gap: 20px;
+        @include center;
+        text-align: center;
+        h1{
+            color: $color-1;
+            font-size: 34px;
+            font-weight: 600;
+        }
+        p{
+            color: $color-1;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+    }
+}
+.section7{
+    width: 100%;
+    padding: 20px 0px;
+    .news{
+        @include between;
+        .on{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            h1{
+                font-size: 34px;
+                font-weight: 600;
+            }
+            p{
+                font-size: 16px;
+                color: rgb(83, 82, 82) ;
+                font-weight: 600;
+            }
+        }
+        button{
+            width: 160px;
+            padding: 12px 0px;
+            font-size: 16px;
+            outline: none;
+            border: 1px solid  rgb(255, 217, 0);
+            background-color: rgb(255, 217, 0);
+            border-radius: 5px;
+            transition: all 0.5s ease;
+            &:hover{
+                cursor: pointer;
+                transition: all 0.7s ease;
+                border: 1px solid  rgb(212, 181, 0);
+                background-color: rgb(212, 181, 0);
+            }
+        }
+    }
+}
+.middle{
+    width: 100%;
+    padding: 50px 0px;
+    .west{
+       display: flex;
+       justify-content: space-between;
+       align-items: flex-start;
+        width: 100%;
+        gap: 14px;
+        display: flex;
+        flex-wrap: wrap;
+        .east{
+            flex-wrap: wrap;
+            width: 340px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: rgb(248, 247, 218);
+            transition: all .7s ease;
+            img{
+                width: 100%;
+            }
+             h1{
+            padding-left: 20px;
+                font-size: 16px;
+                color: rgb(83, 82, 82) ;
+                font-weight: 600;
+             }
+             p{
+              padding-left: 20px;
+                font-size: 22px;
+                font-weight: 600;
+               padding-bottom: 10px;
+             }
+             &:hover{
+                box-shadow: 0px 4px 20px gray;
+                cursor: pointer;
+                transition: all .5s ease;
+             }
+        }
+    }
+}
+
+footer{
+    width: 100%;
+    padding: 20px 0px;
+    background-color: rgb(219, 240, 240);
+    .end{
+        width: 100%;
+        @include between;
+        text-align: center;
+        p{
+            font-size: 15px;
+            color: gray;
+            span{
+                transition: all .5s ease;
+                &:hover{
+                    color: blue;
+                    transition: all .7s ease;
+                    cursor: pointer;
+                }
+                
+            }
+        }
+        .icons{
+            width: 150px;
+            @include between;
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1024px){
+    .section5{
+        .pictures{
+            img{
+                width: 20%;
+                object-fit: cover;
+            }
+        }
+    }
+    .section7{
+        .news{
+            button{
+                display: none;
+            }
+            .on{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px){
+    nav{
+        width: 100%;
+        .navbar{
+            ul{
+                display: none;
+            }
+            #list{
+                display: block;
+            }
+        }
+    }
+    .section1{
+        .kalium{
+            .for{
+                h1{
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+    .section3{
+        width: 100%;
+        height: 200vh;
+        .beach{
+            width: 100%;
+            flex-direction: column;
+            .beach-1{
+                width: 100%;
+
+                h1{
+                    font-size: 28px;
+                }
+            }
+            .beach-2{
+                width: 100%;
+            }
+        }
+    }
+    .section5{
+        width: 100%;
+        .pictures{
+            img{
+                height: 100%;
+                width: 44%;
+                object-fit: cover;
+            }
+        }
+    }
+    .section6{
+        .flat{
+            h1{
+                font-size: 25px;
+            }
+            p{
+                font-size: 13px;
+            }
+        }
+    }
+    .middle{
+        width: 100%;
+        .west{
+            width: 100%;
+            gap: 20px;
+            .east{
+                width: 100%;
+            }
+        }
+    }
+    footer{
+        width: 100%;
+        padding: 20px 0px;
+        .end{
+            width: 100%;
+            @include between;
+            gap: 20px;
+             flex-direction: column-reverse;
+        }
+    }
+}
+
+@media screen and (max-width:576px){
+    .section1{
+        .kalium{
+            .for{
+                p{
+                    font-size: 11px;
+                }
+                h1{
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+    .section2{
+        .book{
+            .book-1{
+                width: 90%;
+            }
+        }
+    }
+    
+    .section5{
+        width: 100%;
+        .pictures{
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
             }
         }
     }
