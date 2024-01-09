@@ -14,6 +14,10 @@
   max-width: 1200px;
 }
 
+.none {
+  display: none;
+}
+
 nav {
   width: 100%;
   position: absolute;
@@ -21,7 +25,23 @@ nav {
   left: 0;
   padding: 27px 0px;
 }
+nav .list {
+  padding: 10px 0px;
+  background-color: white;
+}
+nav .list ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 5px 0px 5px 16px;
+}
+nav .list ul li {
+  font-weight: 600;
+  font-size: 18px;
+}
 nav .navbar {
+  margin-bottom: 10px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -46,17 +66,12 @@ nav .navbar ul li {
 }
 nav .navbar ul li::after {
   content: "";
-  display: block;
   border-bottom: 1px solid yellow;
-  width: 0px;
+  width: 0;
   position: absolute;
-  margin-top: 10px;
-  bottom: -1px;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: all;
-  transition-duration: 0.4s;
-  transition-timing-function: linear;
+  bottom: -5px;
+  left: 0;
+  transition: all 0.5s ease;
 }
 nav .navbar ul li:hover::after {
   width: 100%;
@@ -89,6 +104,7 @@ nav .navbar #list {
   flex-direction: column;
   gap: 20px;
   text-align: center;
+  transition: 0.5s ease;
 }
 .section1 .kalium .for p {
   color: rgb(197, 197, 197);
@@ -120,6 +136,41 @@ nav .navbar #list {
   transition: all 0.7s ease;
 }
 
+.sort {
+  width: 100%;
+  padding: 30px 0px;
+}
+.sort .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.sort .search button {
+  margin-top: 50px;
+  text-align: center;
+  color: white;
+  width: 170px;
+  padding: 12px 0px;
+  border-style: none;
+  border: 1px solid white;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: rgb(241, 206, 2);
+  border: 1px solid rgb(241, 206, 2);
+  cursor: pointer;
+  border-radius: 5px;
+}
+.sort .search input {
+  outline: none;
+  border: 2px solid rgb(241, 206, 2);
+  width: 80%;
+  padding: 8px 0px;
+  padding-left: 8px;
+  font-size: 15px;
+}
+
 .section2 {
   width: 100%;
   padding: 60px 0px;
@@ -141,6 +192,22 @@ nav .navbar #list {
   flex-direction: column;
   gap: 10px;
 }
+.section2 .book .book-1 .btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+.section2 .book .book-1 .btns button {
+  width: 60px;
+  background-color: rgb(241, 206, 2);
+  border: 1px solid rgb(241, 206, 2);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 7px 0px;
+  border-radius: 7px;
+}
 .section2 .book .book-1 img {
   width: 60px;
 }
@@ -153,6 +220,178 @@ nav .navbar #list {
   font-size: 16px;
   color: rgb(99, 98, 98);
   line-height: 26px;
+}
+
+.details {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://images3.alphacoders.com/133/1334556.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.details .back {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 150px;
+  background-color: rgb(241, 206, 2);
+  border: 1px solid rgb(241, 206, 2);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 10px 0px;
+  border-radius: 7px;
+}
+.details .book {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.details .book .book-1 {
+  width: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.details .book .book-1 .btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+.details .book .book-1 .btns button {
+  width: 60px;
+  background-color: rgb(241, 206, 2);
+  border: 1px solid rgb(241, 206, 2);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 7px 0px;
+  border-radius: 7px;
+}
+.details .book .book-1 img {
+  width: 60px;
+}
+.details .book .book-1 h1 {
+  font-size: 27px;
+  font-weight: 600;
+}
+.details .book .book-1 p {
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+  line-height: 26px;
+}
+
+.update {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://images3.alphacoders.com/133/1334556.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.update .back {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 150px;
+  background-color: rgb(104, 104, 255);
+  border: 1px solid rgb(104, 104, 255);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 10px 0px;
+  border-radius: 7px;
+}
+.update .update-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.update .update-page h1 {
+  font-size: 40px;
+  font-weight: 600;
+  color: white;
+}
+.update .update-page form {
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgb(104, 104, 255);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 20px gray;
+}
+.update .update-page form input {
+  padding: 7px 0px;
+  outline: none;
+}
+
+.add {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://images3.alphacoders.com/133/1334556.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add .back {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 150px;
+  background-color: rgb(104, 104, 255);
+  border: 1px solid rgb(104, 104, 255);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 10px 0px;
+  border-radius: 7px;
+}
+.add .add-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.add .add-page h1 {
+  font-size: 40px;
+  font-weight: 600;
+  color: white;
+}
+.add .add-page form {
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgb(104, 104, 255);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 20px gray;
+}
+.add .add-page form input {
+  padding: 7px 0px;
+  outline: none;
 }
 
 .section3 {
