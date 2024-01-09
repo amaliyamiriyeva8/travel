@@ -292,6 +292,76 @@ nav .navbar #list {
   line-height: 26px;
 }
 
+.favorites {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://images3.alphacoders.com/133/1334556.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.favorites .back {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 150px;
+  background-color: rgb(241, 206, 2);
+  border: 1px solid rgb(241, 206, 2);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 10px 0px;
+  border-radius: 7px;
+}
+.favorites .book {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.favorites .book .book-1 {
+  width: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.favorites .book .book-1 .btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+.favorites .book .book-1 .btns button {
+  width: 60px;
+  background-color: rgb(241, 206, 2);
+  border: 1px solid rgb(241, 206, 2);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 7px 0px;
+  border-radius: 7px;
+}
+.favorites .book .book-1 img {
+  width: 60px;
+}
+.favorites .book .book-1 h1 {
+  font-size: 27px;
+  font-weight: 600;
+}
+.favorites .book .book-1 p {
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+  line-height: 26px;
+}
+
 .update {
   width: 100%;
   height: 100vh;
